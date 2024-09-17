@@ -5,7 +5,8 @@ app = Flask('')
 
 @app.route('/')
 def home():
-  return "<!DOCTYPE html>
+    return '''
+    <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -50,16 +51,14 @@ def home():
     }
 
     .logo-circle {
-      width: 150px;
-      height: 150px;
+      width: 200px;
+      height: 200px;
       background-color: #7289DA;
       border-radius: 50%;
       margin: 0 auto;
       transition: transform 0.3s ease;
-    }
-
-    .logo-circle:hover {
-      transform: rotate(360deg);
+      background: url('  https://cdn.discordapp.com/avatars/1092840114943709234/af5116b0e762a4cfad199c69da5361e0.webp?size=240');
+      background-position: center;
     }
 
     .name-image {
@@ -159,7 +158,7 @@ def home():
   <div class="container">
     <div class="glass-box">
       <div class="logo-circle">
-        <!-- Bot logo here -->
+        
       </div>
       
       <div class="name-image">
@@ -186,9 +185,12 @@ def home():
   </div>
 </body>
 </html>
-"
+
+    '''
+
 def run():
-  app.run(host='0.0.0.0',port=8000)
+    app.run(host='0.0.0.0', port=8000)
+
 def keep_alive():
-  t = Thread(target=run)
-  t.start()
+    t = Thread(target=run)
+    t.start()
