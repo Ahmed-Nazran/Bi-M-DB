@@ -168,7 +168,7 @@ def home():
       <p class="description">Hi! I am Billu. People call me Billu Mia. Your AI-Powered Discord Companion. You can chat with me whenever you want!</p>
       
       <div class="buttons">
-        <button>🔗 Add to Discord</button>
+        <button onclick="window.location.href='https://discord.com/oauth2/authorize?client_id=1092840114943709234&permissions=8&integration_type=0&scope=bot'">🔗 Add to Discord</button>
         <button>📖 Learn More</button>
       </div>
     </div>
